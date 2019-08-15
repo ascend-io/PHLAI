@@ -24,7 +24,7 @@
 
 <h3>Step 3: Create a new dataflow</h3>
 
-*   Enter the name: **Insurance Claims Analysis <your initials>**
+*   Enter the name: "**Insurance Claims Analysis"**". Add you initials to the end of the dataflow name so your dataflow is unique. For example, "**Insurance Claims Analysis SP**".
 *   Click _CREATE_
 
 
