@@ -216,3 +216,27 @@
 
 ```
 *   Click _UPDATE_
+
+<h3>Step 10: Swap out Classification Models</h3>
+
+*   Click on the **"Model Training"** transform
+*   Click _EDIT_
+*   Using the PySpark editor, navigate to Line 44, where we previously defined our **"LogisticRegression"** model. 
+*   Here, we will try training a **"RandomForestClassifier"** ([PySpark documentation](https://spark.apache.org/docs/2.2.0/ml-classification-regression.html#random-forest-classifier)). 
+*   Replace the code on Line 44 with the following:
+```
+lr = RandomForestClassifier(numTrees=10)
+```
+*   You will also need to make sure that you have imported the **"RandomForestClassifier"** model, so on Line 3, add **",RandomForestClassifier"** to the end. 
+*   Line 3 should now look like this:
+```
+from pyspark.ml.classification import LogisticRegression,LogisticRegressionModel,RandomForestClassifier
+```
+*   Click _UPDATE_
+*   You have now trained an ML classifier with a Random Forest model!
+
+<h3>Extra Credit: Tuning and Experimenting with other models</h3>
+
+*   **Tuning**: Tuning our models is really simple now. We can adjust specific parameters in each PySpark model such as changing **"numTrees=10"** in Step 10 to **"numTrees=20"**.
+
+*   **Experimentation**: If you want to go above and beyond this lab and experiment with other classifiers, find your favorite [Pyspark classifier](https://spark.apache.org/docs/2.2.0/ml-classification-regression.html) and follow the steps in Step 10 to import your new classifier, initializing it with the right parameters, and clicking _UPDATE_!
